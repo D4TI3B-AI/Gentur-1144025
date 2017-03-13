@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 print('Hitung luas belah ketupat')
 d1 = input('diagonal 1 = ' )
 d2 = input('diagonal 2 = ' )
@@ -27,4 +29,5 @@ else:
 	x = 'lebih dari sembilan'
 
 print('Hasil luas belah ketupat = ' + Luas + '(' + x + ')')
+print("time : %s detik " % (time.time() - start_time))
 
