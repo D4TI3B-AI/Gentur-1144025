@@ -1,3 +1,11 @@
+g = {"a" : ["d", "f"],
+     "b" : ["c"],
+     "c" : ["b", "c", "d", "e"],
+     "d" : ["a", "c"],
+     "e" : ["c"],
+     "f" : ["d"]
+     }
+
 def temukan_semua_jalur(self, awal_vertex, akhir_vertex, jalur=[]):
     """menemukan semua jalur dari awal_vertex ke
     akhir_vertex didalam graph"""
@@ -16,17 +24,8 @@ def temukan_semua_jalur(self, awal_vertex, akhir_vertex, jalur=[]):
     return jalurs
 
 
-g = {"a" : ["d", "f"],
-     "b" : ["c"],
-     "c" : ["b", "c", "d", "e"],
-     "d" : ["a", "c"],
-     "e" : ["c"],
-     "f" : ["d"]
-     }
-
-
 a = input('awal vertex = ')
 b = input('akhir vertex = ')
 print('Semua jalur dari vertex ' + a + ' ke vertex ' + b + ':')
-path = graph.temukan_semua_jalur(g, a, b)
+path = temukan_semua_jalur(g, a, b, jalur=[])
 print(path)
